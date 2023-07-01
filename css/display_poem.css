@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: green;
+    max-width: 100%;
 }
 
 #display-poem-content-container {
@@ -13,7 +15,8 @@
 #download-btn-container,
 #title-author-container {
     width: 100%;
-    min-height: 100px;
+    height: auto;
+    background-color: red;
 }
 
 #download-btn-container {
@@ -24,9 +27,14 @@
 #download-btn,
 #title,
 #author {
-    display: none;
+    /* display: none; */
     font-weight: 900;
     background-color: rgba(255, 255, 255, 0);
+    color:rgba(255, 255, 255, 0);
+}
+
+#download-btn {
+    opacity: 0;
 }
 
 #download-btn img {

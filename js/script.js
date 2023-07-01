@@ -97,6 +97,8 @@ $('document').ready(function(){
   }
   
   var shaker = document.getElementsByClassName("shake")[0];
+  var body = document.getElementsByTagName("BODY")[0];
+  var html = document.getElementsByTagName("HTML")[0];
 
   /* ----- title card ----- */
   var titleCard = document.getElementById("title-card");
@@ -112,8 +114,6 @@ $('document').ready(function(){
   var title = document.getElementById("title");
   var author = document.getElementById("author");
   var resetBtn = document.getElementById("inner-btn-reset");
-  var title_author_container = document.getElementById("title-author-container");
-  var download_btn_container = document.getElementById("download-btn-container");
   
   /* ----- Set timeout for title page ----------------------------------- */
   setTimeout(() => {
@@ -146,8 +146,10 @@ $('document').ready(function(){
 
   // get a click event for the submit theme button.
   submitBtn.addEventListener('click', () => {
-    console.log(canActivateSubmitBtn(keywordsBtns));
     if (canActivateSubmitBtn(keywordsBtns)) {
+      body.style.display = "block"; body.style.marginTop = "10px";
+      html.style.display = "block"; html.style.marginTop = "10px";
+
       displayPoemContainer.style.display = "flex";
       keywordsContainer.style.display = "none";
       submitBtn.disabled = true;
@@ -163,14 +165,19 @@ $('document').ready(function(){
       // displayPoem displays selected poem and returns the title and author of 
       // said poem.
       var author_title = displayPoem(activeBtns);
+      title.innerText = author_title[0];
+      author.innerText = author_title[1];
       resetBtn.classList.remove("shake1");
       // sets a timer and make it so that the inner button is not clickable.
       setTimeout(() => {
         resetBtn.disabled = false;
-        downloadBtn.style.display = "block";
-        title.innerText = author_title[0]; title.style.display = "block";
-        author.innerText = author_title[1]; author.style.display = "block";
-        
+        // downloadBtn.style.display = "block";
+        // title.innerText = author_title[0]; title.style.display = "block";
+        // author.innerText = author_title[1]; author.style.display = "block";
+        title.style.color = "rgba(0, 0, 0, 1)";
+        author.style.color = "rgba(0, 0, 0, 1)";
+        downloadBtn.style.opacity = "1";
+
         downloadBtn.classList.add("shake1"); 
         resetBtn.classList.add("shake1");
       }, DURATION_RESET); // 10s
@@ -182,14 +189,20 @@ $('document').ready(function(){
   resetBtn.addEventListener("click", () => {
     resetBtn.disabled = true;
     displayPoemContainer.style.display = "none";
+
+    body.style.display = "flex";
+    html.style.display = "flex";
     keywordsContainer.style.display = "flex";
-    downloadBtn.style.display = "none";
+    // downloadBtn.style.display = "none";
 
     title.innerText = "";
     author.innerText = "";
     populateKeyWords();
 
     submitBtn.classList.remove("shake1");
+    title.style.color = "rgba(0, 0, 0, 0)";
+    author.style.color = "rgba(0, 0, 0, 0)";
+    downloadBtn.style.opacity = "0";
     
     // Make submit button inactive for the duration.
     setTimeout(() => {
