@@ -13,7 +13,7 @@
 #download-btn-container,
 #title-author-container {
     width: 100%;
-    min-height: 50px;
+    min-height: 100px;
 }
 
 #download-btn-container {
@@ -643,7 +643,7 @@
     #display-poem,
     #title,
     #author {
-        font-size: 0.8em;
+        font-size: 0.85em;
     }
 
     #download-btn img {
