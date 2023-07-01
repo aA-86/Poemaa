@@ -16,6 +16,11 @@
     height: 100px;
 }
 
+#download-btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
 #download-btn,
 #title,
 #author {
@@ -632,4 +637,16 @@
     100.0%{ 
     background-image: conic-gradient(#ffffff00 100.0%, #fff 0);
     }        
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) { 
+    #display-poem,
+    #title,
+    #author {
+        font-size: 0.8em;
+    }
+
+    #download-btn img {
+        width: 30px;
+    }
 }

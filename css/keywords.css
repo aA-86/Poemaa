@@ -32,8 +32,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: var(--keywords-container-width);
-    min-width: var(--keywords-container-width);
+    max-width: 100%;
+    min-width: 100%;
     max-height: var(--keywords-container-height);
     min-height: var(--keywords-container-height);
     align-items: center;
@@ -95,35 +95,21 @@
     }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 767px) { 
     :root {
-        --keywords-container-width: 700px;
+        --keywords-container-width: 80%;
         --keywords-container-height: 300px;
     }
 
-    .keywords-btn, #submit-btn {
-        font-size: 1em;
+
+    #keywords-container {
+        padding: 0px;
     }
 }
 
-@media only screen and (max-width:800px) {
-    :root {
-        --keywords-container-width: 600px;
-        --keywords-container-height: 300px;
-    }
-
-    .keywords-btn, #submit-btn {
-        font-size: 1em;
-    }
-}
-
-@media only screen and (max-width:700px) {
-    :root {
-        --keywords-container-width: 500px;
-        --keywords-container-height: 300px;
-    }
-
-    .keywords-btn, #submit-btn {
-        font-size: 0.9em;
+@media only screen and (max-width: 545px) { 
+    .keywords-btn, 
+    #submit-btn {
+        font-size: 0.6em;
     }
 }

@@ -2172,3 +2172,13 @@
       );
     }
 }
+
+@media only screen and (min-width: 375px) and (max-width: 767px) { 
+  #title-card {
+    font-size: 4em;
+  }
+
+  .little-a {
+    font-size: 0.3em;
+  }
+}

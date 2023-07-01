@@ -92,7 +92,7 @@
     background-color: rgba(0,0,0,0);
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width: 767px) {
     .timer-btn-meter-container {
         top: 80%;
         left: 50%;
@@ -107,7 +107,7 @@
     }
 
     .progress-bar-reset-btn, .inner-reset-btn{
-        right: 8px;
+        right: 9px;
     }
 
     #inner-btn-reset,
@@ -119,5 +119,13 @@
         --progress_bar_width: 60px; /* default 150px */
         --progress_bar_outer_width: 58px; /* default 148px */
         --progress_bar_inner_width: 45px; /* default 115px */
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    #inner-btn-reset,
+    #submit-btn {
+        font-size: 0.6em;
+        font-weight: 600;
     }
 }
