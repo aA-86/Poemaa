@@ -112,7 +112,7 @@
 
     #inner-btn-reset,
     #submit-btn {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     :root {
@@ -127,5 +127,13 @@
     #submit-btn {
         font-size: 0.6em;
         font-weight: 600;
+    }
+}
+
+@media only screen and (max-height: 812px) {
+    .timer-btn-meter-container {
+        top: 87.5%;
+        left: 50%;
+        transform: translate(-50%, -80%);
     }
 }

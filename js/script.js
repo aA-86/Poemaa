@@ -112,6 +112,8 @@ $('document').ready(function(){
   var title = document.getElementById("title");
   var author = document.getElementById("author");
   var resetBtn = document.getElementById("inner-btn-reset");
+  var title_author_container = document.getElementById("title-author-container");
+  var download_btn_container = document.getElementById("download-btn-container");
   
   /* ----- Set timeout for title page ----------------------------------- */
   setTimeout(() => {
@@ -161,13 +163,14 @@ $('document').ready(function(){
       // displayPoem displays selected poem and returns the title and author of 
       // said poem.
       var author_title = displayPoem(activeBtns);
+      resetBtn.classList.remove("shake1");
       // sets a timer and make it so that the inner button is not clickable.
       setTimeout(() => {
         resetBtn.disabled = false;
         downloadBtn.style.display = "block";
-  
         title.innerText = author_title[0]; title.style.display = "block";
         author.innerText = author_title[1]; author.style.display = "block";
+        
         downloadBtn.classList.add("shake1"); 
         resetBtn.classList.add("shake1");
       }, DURATION_RESET); // 10s
@@ -185,6 +188,8 @@ $('document').ready(function(){
     title.innerText = "";
     author.innerText = "";
     populateKeyWords();
+
+    submitBtn.classList.remove("shake1");
     
     // Make submit button inactive for the duration.
     setTimeout(() => {

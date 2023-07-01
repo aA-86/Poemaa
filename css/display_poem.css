@@ -13,7 +13,7 @@
 #download-btn-container,
 #title-author-container {
     width: 100%;
-    height: 100px;
+    min-height: 50px;
 }
 
 #download-btn-container {
