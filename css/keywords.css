@@ -1,0 +1,129 @@
+:root {
+    --keywords-container-width: 800px;
+    --keywords-container-height: 300px;
+}
+
+/* keywords */
+#keywords-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-sizing: border-box;
+    max-width: var(--keywords-container-width);
+    min-width: var(--keywords-container-width);
+    max-height: var(--keywords-container-height);
+    min-height: var(--keywords-container-height);
+
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25) inset,
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3) inset;
+    border-radius: 50px;
+
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.22),
+      rgba(255, 255, 255, 0.25)
+  );
+}
+
+#keywords {
+    /* display: none; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: var(--keywords-container-width);
+    min-width: var(--keywords-container-width);
+    max-height: var(--keywords-container-height);
+    min-height: var(--keywords-container-height);
+    align-items: center;
+}
+
+#keywords > button {  
+    margin: 3.5%;
+    width: 26.33%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);  /*completely transparent background colour */
+}
+
+.shake1,
+.shake2 {
+    position: relative;
+    animation: shakeAnimation 400ms infinite;
+    animation-delay: 1000ms;
+}
+
+.shake2 {
+    animation-direction: reverse;
+}
+
+@keyframes shakeAnimation {
+    0% {
+        left: 0px;
+    }
+
+    12.5% {
+        left: 0.75px;
+    }
+
+    25% {
+        left: 1.5px;
+    }
+
+    37.5% {
+        left: 0.75px;
+    }
+
+    50% {
+        left: 0px;
+    }
+
+    62.5% {
+        left: -0.75px;
+    }
+
+    75% {
+        left: -1.5px;
+    }
+
+    87.5% {
+        left: -0.75px;
+    }
+    
+    100% {
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    :root {
+        --keywords-container-width: 700px;
+        --keywords-container-height: 300px;
+    }
+
+    .keywords-btn, #submit-btn {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    :root {
+        --keywords-container-width: 600px;
+        --keywords-container-height: 300px;
+    }
+
+    .keywords-btn, #submit-btn {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    :root {
+        --keywords-container-width: 500px;
+        --keywords-container-height: 300px;
+    }
+
+    .keywords-btn, #submit-btn {
+        font-size: 0.9em;
+    }
+}

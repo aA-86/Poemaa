@@ -1,0 +1,123 @@
+:root {
+    --progress_bar_width: 90px; /* default 150px */
+    --progress_bar_outer_width: 88px; /* default 148px */
+    --progress_bar_inner_width: 70px; /* default 115px */
+    --display-poem-width: 400px;
+}
+
+/* ----- Reset Button ----- */
+.reset-btn-meter-container,
+.timer-btn-meter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: var(--progress_bar_width);
+}
+
+.reset-btn-meter-container {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-85%, -50%);  
+}
+
+.timer-btn-meter-container {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
+
+.progress-bar-outer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: var(--progress_bar_outer_width);
+    height: var(--progress_bar_outer_width);
+    align-items: center;
+    background-image: url(./../images/truncated.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.progress-bar {
+    position: relative;
+    width: var(--progress_bar_width);
+    height: var(--progress_bar_width);
+    margin: 0.5rem;
+    overflow: hidden;
+    background-image: conic-gradient(#DDE6ED 0, #ffffff00 0);
+    animation-fill-mode: forwards;
+}
+
+.progress-bar-reset-btn {
+    animation: fillProgress 10s linear 1;
+}
+
+.progress-bar-submit-btn {
+    animation: fillProgress 4s linear 1;
+}
+
+.progress-bar .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--progress_bar_inner_width);
+    height: var(--progress_bar_inner_width);
+    background: white;
+    font-size: 1.85em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#keywords-container #submit-container {
+    display: none;
+}
+
+#submit-container {
+    display: inline;
+}
+
+#inner-btn-timer,
+#inner-btn-reset,
+#submit-btn {
+    font-size: 1.2em;
+    background-color: rgba(0,0,0,0);
+}
+
+@media only screen and (max-width:640px) {
+    .timer-btn-meter-container {
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+    }
+
+    .reset-btn-meter-container{
+        position: static;
+        transform: translate(0, 0);
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .progress-bar-reset-btn, .inner-reset-btn{
+        right: 8px;
+    }
+
+    #inner-btn-reset,
+    #submit-btn {
+        font-size: 0.7em;
+    }
+
+    :root {
+        --progress_bar_width: 60px; /* default 150px */
+        --progress_bar_outer_width: 58px; /* default 148px */
+        --progress_bar_inner_width: 45px; /* default 115px */
+    }
+}

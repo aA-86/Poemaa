@@ -1,0 +1,33 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html, 
+body {
+    /* background-color: red; */
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(200, 200, 200); */
+}
+
+/* body {
+    background-image: 
+    linear-gradient(45deg,rgb(79, 37, 35), rgb(247, 243, 232));
+} */
+
+button {
+    border: none;
+    border-radius: 10px;
+}
+
+#content-container {
+    /* background-color: green; */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- 
+    <div id="content-container">
+      <p>hello</p>
+      <button id="generate-poem">Press me!</button>
+      <button id="test">test</button>
+      <div id="display-poem-container"><pre id="display-poem"></pre></div>
+    </div>
+-->
+    <div id="content-container">
+      <div id="title-card-container">
+        <div id="title-card">Poema<span class="little-a">a</span></div>
+      </div>
+      <div id="keywords-container">
+        <div id="keywords">
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key1"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            1
+          </button>
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key2"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            2
+          </button>
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key3"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            3
+          </button>
+
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key4"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            4
+          </button>
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key5"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            5
+          </button>
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key6"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            6
+          </button>
+
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key7"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            7
+          </button>
+          <button
+            type="button"
+            class="keywords-btn"
+            id="key8"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            8
+          </button>
+          <button
+            type="button "
+            class="keywords-btn"
+            id="key9"
+            data-value=""
+            data-active="false"
+            data-index=""
+          >
+            9
+          </button>
+        </div>
+        <!-- Timer Button -->
+        <div class="timer-btn-meter-container">
+          <div class="progress-bar-outer"></div>
+          <div class="progress-bar progress-bar-submit-btn">
+            <div class="inner">
+              <button type="button" id="submit-btn" disabled>&#62;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="display-poem-container">
+        <!-- Donwload Button -->
+        <div id="download-btn-container">
+          <button type="button" id="download-btn">
+            <img src="./images/download.png" />
+          </button>
+        </div>
+
+        <!-- Poem Content -->
+        <div id="display-poem-content-container">
+          <pre id="display-poem"></pre>
+        </div>
+
+        <!-- Author and Title -->
+        <div id="title-author-container">
+          <p id="title"></p>
+          <p id="author"></p>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="reset-btn-meter-container">
+          <div class="progress-bar-outer"></div>
+          <div class="progress-bar progress-bar-reset-btn">
+            <div class="inner inner-reset-btn">
+              <button type="button" id="inner-btn-reset" disabled>&#60;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Loading the javascript files. Looks ugly but will use Node.js and Webpack bundler to make this import look cleaner -->
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <!-- All poem information including body, title, linecount and author -->
+  <script type="text/javascript" src="./js/poems.js"></script>
+  <!-- Themes only -->
+  <script type="text/javascript" src="./js/themes.js"></script>
+  <!-- Script to make all the action work -->
+  <script type="text/javascript" src="./js/script.js"></script>
+</html>
