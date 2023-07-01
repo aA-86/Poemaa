@@ -95,9 +95,9 @@
 
 @media only screen and (max-width: 1200px) {
     .timer-btn-meter-container {
-        top: 80%;
+        top: 85%;
         left: 50%;
-        transform: translate(-50%, -80%);
+        transform: translate(-50%, -85%);
     }
 }
 
