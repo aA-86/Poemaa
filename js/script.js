@@ -9,8 +9,10 @@ const INACTIVE = "#DDE6ED"; // colours for buttons when active and inactive. mak
 const ACTIVE = "#526D82";
 
 const DURATION_RESET = 10000; // 10s Duration for the reset button
-const DURATION_TITLE = 7000; //  7s Duration for the title card
-const DURATION_SUBMIT = 4000; // 4s Duration for the submit button to be ready.
+const DURATION_TITLE = 700; //  7s Duration for the title card
+const DURATION_SUBMIT = 400; // 4s Duration for the submit button to be ready.
+const vh = document.documentElement.clientHeight || 0;
+
 
 /* ----- Functions ----- */
 function populateKeyWords() {
@@ -147,12 +149,17 @@ $('document').ready(function(){
   // get a click event for the submit theme button.
   submitBtn.addEventListener('click', () => {
     if (canActivateSubmitBtn(keywordsBtns)) {
-      body.style.display = "block"; body.style.marginTop = "10px";
-      html.style.display = "block"; html.style.marginTop = "10px";
-
       displayPoemContainer.style.display = "flex";
       keywordsContainer.style.display = "none";
       submitBtn.disabled = true;
+
+      var a = displayPoemContainer.offsetHeight;
+      console.log(a);
+      console.log(0.9 * vh);
+      if (displayPoemContainer.offsetHeight >= 0.9 * vh) {
+        body.style.display = "block"; body.style.marginTop = "10px";
+        html.style.display = "block"; html.style.marginTop = "10px";
+      }
   
       // goes through all the btns and get the selected themes
       var activeBtns = [];

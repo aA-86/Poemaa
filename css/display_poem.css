@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: green;
     max-width: 100%;
 }
 
@@ -16,7 +15,6 @@
 #title-author-container {
     width: 100%;
     height: auto;
-    background-color: red;
 }
 
 #download-btn-container {

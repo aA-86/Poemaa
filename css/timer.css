@@ -16,7 +16,7 @@
     width: var(--progress_bar_width);
 }
 
-.reset-btn-meter-container {
+.reset-btn-meter-container{
     position: absolute;
     top: 50%;
     left: 85%;
@@ -26,9 +26,10 @@
 .timer-btn-meter-container {
     position: absolute;
     top: 50%;
-    left: 100%;
-    transform: translate(-100%, -50%);
+    left: 90%;
+    transform: translate(-90%, -50%);  
 }
+
 
 .progress-bar-outer {
     position: absolute;
@@ -92,13 +93,15 @@
     background-color: rgba(0,0,0,0);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
     .timer-btn-meter-container {
         top: 80%;
         left: 50%;
         transform: translate(-50%, -80%);
     }
+}
 
+@media only screen and (max-width: 767px) {
     .reset-btn-meter-container{
         position: static;
         transform: translate(0, 0);
@@ -127,13 +130,5 @@
     #submit-btn {
         font-size: 0.6em;
         font-weight: 600;
-    }
-}
-
-@media only screen and (max-height: 812px) {
-    .timer-btn-meter-container {
-        top: 87.5%;
-        left: 50%;
-        transform: translate(-50%, -80%);
     }
 }
