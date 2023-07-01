@@ -9,9 +9,8 @@ const INACTIVE = "#DDE6ED"; // colours for buttons when active and inactive. mak
 const ACTIVE = "#526D82";
 
 const DURATION_RESET = 10000; // 10s Duration for the reset button
-const DURATION_TITLE = 700; //  7s Duration for the title card
-const DURATION_SUBMIT = 400; // 4s Duration for the submit button to be ready.
-const vh = document.documentElement.clientHeight || 0;
+const DURATION_TITLE = 7000; //  7s Duration for the title card
+const DURATION_SUBMIT = 4000; // 4s Duration for the submit button to be ready.
 
 
 /* ----- Functions ----- */
@@ -152,14 +151,6 @@ $('document').ready(function(){
       displayPoemContainer.style.display = "flex";
       keywordsContainer.style.display = "none";
       submitBtn.disabled = true;
-
-      var a = displayPoemContainer.offsetHeight;
-      console.log(a);
-      console.log(0.9 * vh);
-      if (displayPoemContainer.offsetHeight >= 0.9 * vh) {
-        body.style.display = "block"; body.style.marginTop = "10px";
-        html.style.display = "block"; html.style.marginTop = "10px";
-      }
   
       // goes through all the btns and get the selected themes
       var activeBtns = [];
@@ -175,6 +166,17 @@ $('document').ready(function(){
       title.innerText = author_title[0];
       author.innerText = author_title[1];
       resetBtn.classList.remove("shake1");
+
+      var a = window.getComputedStyle(displayPoemContainer);
+      var divheight = parseFloat(a.height);
+      var vh = document.documentElement.clientHeight || 0;
+      console.log(divheight);
+      console.log(0.9 * vh);
+      if (displayPoemContainer.offsetHeight >= 0.9 * vh) {
+        body.style.display = "block"; body.style.marginTop = "10px";
+        html.style.display = "block"; html.style.marginTop = "10px";
+      }
+
       // sets a timer and make it so that the inner button is not clickable.
       setTimeout(() => {
         resetBtn.disabled = false;
