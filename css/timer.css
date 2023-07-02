@@ -163,21 +163,3 @@
         transform: translate(-50%, -90%);
     }
 }
-
-/* iPhone XR portrait mode */
-@media only screen and (max-width: 414px) and (orientation: portrait) {
-
-    /* makes sure the timer button is positioned properly */
-    :root {
-        --progress_bar_width: 60px;
-        /* default 150px */
-        --progress_bar_outer_width: 58px;
-        /* default 148px */
-        --progress_bar_inner_width: 45px;
-        /* default 115px */
-    }
-
-    .progress-bar {
-        right: 9px;
-    }
-}
