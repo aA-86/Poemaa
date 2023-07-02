@@ -1,7 +1,10 @@
 :root {
-    --progress_bar_width: 90px; /* default 150px */
-    --progress_bar_outer_width: 88px; /* default 148px */
-    --progress_bar_inner_width: 70px; /* default 115px */
+    --progress_bar_width: 90px;
+    /* default 150px */
+    --progress_bar_outer_width: 88px;
+    /* default 148px */
+    --progress_bar_inner_width: 70px;
+    /* default 115px */
     --display-poem-width: 400px;
 }
 
@@ -16,18 +19,18 @@
     width: var(--progress_bar_width);
 }
 
-.reset-btn-meter-container{
+.reset-btn-meter-container {
     position: absolute;
     top: 50%;
     left: 85%;
-    transform: translate(-85%, -50%);  
+    transform: translate(-85%, -50%);
 }
 
 .timer-btn-meter-container {
     position: absolute;
     top: 50%;
     left: 90%;
-    transform: translate(-90%, -50%);  
+    transform: translate(-90%, -50%);
 }
 
 
@@ -90,7 +93,7 @@
 #inner-btn-reset,
 #submit-btn {
     font-size: 1.2em;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -102,15 +105,11 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .reset-btn-meter-container{
+    .reset-btn-meter-container {
         position: static;
         transform: translate(0, 0);
         align-items: flex-start;
         width: 100%;
-    }
-
-    .progress-bar-reset-btn, .inner-reset-btn{
-        right: 9px;
     }
 
     #inner-btn-reset,
@@ -119,13 +118,17 @@
     }
 
     :root {
-        --progress_bar_width: 60px; /* default 150px */
-        --progress_bar_outer_width: 58px; /* default 148px */
-        --progress_bar_inner_width: 45px; /* default 115px */
+        --progress_bar_width: 60px;
+        /* default 150px */
+        --progress_bar_outer_width: 58px;
+        /* default 148px */
+        --progress_bar_inner_width: 45px;
+        /* default 115px */
     }
 }
 
 @media only screen and (max-width: 545px) {
+
     #inner-btn-reset,
     #submit-btn {
         font-size: 0.6em;
@@ -133,13 +136,14 @@
     }
 }
 
-@media only screen and 
-(max-width: 812px) and
-(orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
     :root {
-        --progress_bar_width: 60px; /* default 150px */
-        --progress_bar_outer_width: 58px; /* default 148px */
-        --progress_bar_inner_width: 45px; /* default 115px */
+        --progress_bar_width: 60px;
+        /* default 150px */
+        --progress_bar_outer_width: 58px;
+        /* default 148px */
+        --progress_bar_inner_width: 45px;
+        /* default 115px */
     }
 
     #inner-btn-reset,
@@ -150,13 +154,30 @@
 }
 
 /* iPhone X landscape mode */
-@media only screen and
-(max-height: 375px) and
-(orientation: landscape) {
+@media only screen and (max-height: 375px) and (orientation: landscape) {
+
     /* makes sure the timer button is positioned properly */
     .timer-btn-meter-container {
         top: 90%;
         left: 50%;
         transform: translate(-50%, -90%);
+    }
+}
+
+/* iPhone XR portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+
+    /* makes sure the timer button is positioned properly */
+    :root {
+        --progress_bar_width: 60px;
+        /* default 150px */
+        --progress_bar_outer_width: 58px;
+        /* default 148px */
+        --progress_bar_inner_width: 45px;
+        /* default 115px */
+    }
+
+    .progress-bar {
+        right: 9px;
     }
 }

@@ -180,7 +180,7 @@ $('document').ready(function () {
         // author.innerText = author_title[1]; author.style.display = "block";
         title.style.color = "rgba(0, 0, 0, 1)";
         author.style.color = "rgba(0, 0, 0, 1)";
-        downloadBtn.style.opacity = "1";
+        // downloadBtn.style.opacity = "1";
 
         downloadBtn.classList.add("shake1");
         resetBtn.classList.add("shake1");
