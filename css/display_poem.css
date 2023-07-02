@@ -9,12 +9,16 @@
 
 #display-poem-content-container {
     text-align: left;
+    
 }
 
 #download-btn-container,
 #title-author-container {
-    width: 100%;
     height: auto;
+}
+
+#download-btn-container {
+    width: 100%;
 }
 
 #download-btn-container {
@@ -29,6 +33,7 @@
     font-weight: 900;
     background-color: rgba(255, 255, 255, 0);
     color:rgba(255, 255, 255, 0);
+    word-wrap: break-word;
 }
 
 #download-btn {

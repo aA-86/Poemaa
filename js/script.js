@@ -65,6 +65,7 @@ function canActivateSubmitBtn(keywordsBtns) {
       return true;
     }
   }
+  submitBtn.classList.remove("shake1");
   return false;
 }
 
@@ -115,6 +116,7 @@ $('document').ready(function () {
   var title = document.getElementById("title");
   var author = document.getElementById("author");
   var resetBtn = document.getElementById("inner-btn-reset");
+  var title_author_container = document.getElementById("title-author-container");
 
   /* ----- Set timeout for title page ----------------------------------- */
   setTimeout(() => {
@@ -124,6 +126,7 @@ $('document').ready(function () {
     // make submitBtn deactivated until after the duration.
     setTimeout(() => {
       submitBtn.disabled = false;
+      canActivateSubmitBtn(keywordsBtns);
     }, DURATION_SUBMIT);
 
   }, DURATION_TITLE);
@@ -141,6 +144,11 @@ $('document').ready(function () {
       } else {
         button.dataset.active = "false";
         button.style.fontWeight = "400";
+      }
+
+      if (submitBtn.disabled == false) {
+        // Adds shake1 or removes it depending on how many keywords are selected.
+        canActivateSubmitBtn(keywordsBtns);
       }
     })
   });
@@ -171,6 +179,9 @@ $('document').ready(function () {
         body.style.display = "block"; body.style.marginTop = "20px";
         html.style.display = "block"; html.style.marginTop = "20px";
       }
+
+      var displayPoemSize = display_poem.offsetWidth;
+      title_author_container.style.width = `${displayPoemSize}px`;
 
       // sets a timer and make it so that the inner button is not clickable.
       setTimeout(() => {
@@ -211,6 +222,7 @@ $('document').ready(function () {
     // Make submit button inactive for the duration.
     setTimeout(() => {
       submitBtn.disabled = false;
+      canActivateSubmitBtn(keywordsBtns);
     }, DURATION_SUBMIT);
   });
 });
