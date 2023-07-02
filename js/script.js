@@ -63,7 +63,7 @@ function canActivateSubmitBtn(keywordsBtns) {
     if (keywordsBtns[i].dataset.active == "true") {
       submitBtn.classList.add("shake1");
       return true;
-    } 
+    }
   }
   return false;
 }
@@ -76,7 +76,7 @@ function displayPoem(clickedBtns) {
   var randTheme = Math.floor(Math.random() * clickedBtns.length);
   var theme = clickedBtns[randTheme].dataset.value; // get the theme from the btn from the data-value.
   var index = clickedBtns[randTheme].dataset.index; // get the index of the theme from the btn data-index.
-  
+
   // picks a random poem from the given theme.
   var randPoemIndex = Math.floor(Math.random() * THEMES_AND_POEMS[theme].length); // get random poem index
   var poem = THEMES_AND_POEMS[theme][randPoemIndex]['lines']; // Choose a random poem from the given themes.
@@ -92,11 +92,11 @@ function displayPoem(clickedBtns) {
 }
 
 /* ----- When document is ready ----- */
-$('document').ready(function(){
+$('document').ready(function () {
   for (i = 0; i < THEMES_AND_POEMS.length; i++) {
     console.log(THEMES_AND_POEMS[i]);
   }
-  
+
   var shaker = document.getElementsByClassName("shake")[0];
   var body = document.getElementsByTagName("BODY")[0];
   var html = document.getElementsByTagName("HTML")[0];
@@ -115,7 +115,7 @@ $('document').ready(function(){
   var title = document.getElementById("title");
   var author = document.getElementById("author");
   var resetBtn = document.getElementById("inner-btn-reset");
-  
+
   /* ----- Set timeout for title page ----------------------------------- */
   setTimeout(() => {
     titleCard.style.display = "none";
@@ -128,20 +128,20 @@ $('document').ready(function(){
 
   }, DURATION_TITLE);
 
-  /* ----- Populates the keywords with a random theme -------------------- */ 
+  /* ----- Populates the keywords with a random theme -------------------- */
   populateKeyWords();
 
   // get a click event for each keywords button.
   keywordsBtns.forEach(button => {
-      button.addEventListener('click', () => {
-        // Set if button is active or not
-        if (button.dataset.active == "false") {
-          button.dataset.active = "true";
-          button.style.fontWeight = "900";
-        } else {
-          button.dataset.active = "false";
-          button.style.fontWeight = "400";
-        }
+    button.addEventListener('click', () => {
+      // Set if button is active or not
+      if (button.dataset.active == "false") {
+        button.dataset.active = "true";
+        button.style.fontWeight = "900";
+      } else {
+        button.dataset.active = "false";
+        button.style.fontWeight = "400";
+      }
     })
   });
 
@@ -151,7 +151,7 @@ $('document').ready(function(){
       displayPoemContainer.style.display = "flex";
       keywordsContainer.style.display = "none";
       submitBtn.disabled = true;
-  
+
       // goes through all the btns and get the selected themes
       var activeBtns = [];
       for (i = 0; i < keywordsBtns.length; i++) {
@@ -159,22 +159,17 @@ $('document').ready(function(){
           activeBtns.push(keywordsBtns[i]);
         }
       }
-  
+
       // displayPoem displays selected poem and returns the title and author of 
       // said poem.
       var author_title = displayPoem(activeBtns);
       title.innerText = author_title[0];
       author.innerText = author_title[1];
       resetBtn.classList.remove("shake1");
-
-      var a = window.getComputedStyle(displayPoemContainer);
-      var divheight = parseFloat(a.height);
       var vh = document.documentElement.clientHeight || 0;
-      console.log(divheight);
-      console.log(0.9 * vh);
       if (displayPoemContainer.offsetHeight >= 0.9 * vh) {
-        body.style.display = "block"; body.style.marginTop = "10px";
-        html.style.display = "block"; html.style.marginTop = "10px";
+        body.style.display = "block"; body.style.marginTop = "20px";
+        html.style.display = "block"; html.style.marginTop = "20px";
       }
 
       // sets a timer and make it so that the inner button is not clickable.
@@ -187,7 +182,7 @@ $('document').ready(function(){
         author.style.color = "rgba(0, 0, 0, 1)";
         downloadBtn.style.opacity = "1";
 
-        downloadBtn.classList.add("shake1"); 
+        downloadBtn.classList.add("shake1");
         resetBtn.classList.add("shake1");
       }, DURATION_RESET); // 10s
     }
@@ -212,7 +207,7 @@ $('document').ready(function(){
     title.style.color = "rgba(0, 0, 0, 0)";
     author.style.color = "rgba(0, 0, 0, 0)";
     downloadBtn.style.opacity = "0";
-    
+    keywordsContainer.style.marginTop = "-25%";
     // Make submit button inactive for the duration.
     setTimeout(() => {
       submitBtn.disabled = false;

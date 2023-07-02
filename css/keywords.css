@@ -101,7 +101,6 @@
         --keywords-container-height: 300px;
     }
 
-
     #keywords-container {
         padding: 0px;
     }
@@ -111,5 +110,18 @@
     .keywords-btn, 
     #submit-btn {
         font-size: 0.7em;
+    }
+}
+
+@media only screen and
+(max-width: 812px) and
+(orientation: landscape) {
+    :root {
+        --keywords-container-width: 80%;
+        --keywords-container-height: 200px;
+    }
+
+    #keywords-container {
+        margin-top: -15%;
     }
 }

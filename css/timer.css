@@ -132,3 +132,31 @@
         font-weight: 600;
     }
 }
+
+@media only screen and 
+(max-width: 812px) and
+(orientation: landscape) {
+    :root {
+        --progress_bar_width: 60px; /* default 150px */
+        --progress_bar_outer_width: 58px; /* default 148px */
+        --progress_bar_inner_width: 45px; /* default 115px */
+    }
+
+    #inner-btn-reset,
+    #submit-btn {
+        font-size: 0.6em;
+        font-weight: 600;
+    }
+}
+
+/* iPhone X landscape mode */
+@media only screen and
+(max-height: 375px) and
+(orientation: landscape) {
+    /* makes sure the timer button is positioned properly */
+    .timer-btn-meter-container {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+    }
+}

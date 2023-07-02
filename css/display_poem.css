@@ -656,3 +656,17 @@
         width: 30px;
     }
 }
+
+@media only screen and
+(max-width: 812px) and
+(orientation: landscape) { 
+    #display-poem,
+    #title,
+    #author {
+        font-size: 0.85em;
+    }
+
+    #download-btn img {
+        width: 30px;
+    }
+}
