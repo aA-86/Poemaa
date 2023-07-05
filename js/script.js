@@ -9,7 +9,7 @@ const INACTIVE = "#DDE6ED"; // colours for buttons when active and inactive. mak
 const ACTIVE = "#526D82";
 
 const DURATION_RESET = 10000; // 10s Duration for the reset button
-const DURATION_TITLE = 70; //  7s Duration for the title card
+const DURATION_TITLE = 7000; //  7s Duration for the title card
 const DURATION_SUBMIT = 4000; // 4s Duration for the submit button to be ready.
 
 
