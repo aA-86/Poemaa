@@ -60,7 +60,7 @@
 
 .progress-bar-reset-btn {
     animation: fillProgress 10s linear 1;
-    right: 9px;
+    right: 0px;
 }
 
 .progress-bar-submit-btn {
@@ -112,6 +112,10 @@
         transform: translate(0, 0);
         align-items: flex-start;
         width: 100%;
+    }
+
+    .progress-bar-reset-btn {
+        right: 9px;
     }
 
     #inner-btn-reset,
