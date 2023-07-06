@@ -91,11 +91,11 @@
     display: inline;
 }
 
-#inner-btn-timer,
 #inner-btn-reset,
 #submit-btn {
     font-size: 1.2em;
     background-color: rgba(0, 0, 0, 0);
+    display: none;
 }
 
 @media only screen and (max-width: 1200px) {

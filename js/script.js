@@ -126,6 +126,8 @@ $('document').ready(function () {
     // make submitBtn deactivated until after the duration.
     setTimeout(() => {
       submitBtn.disabled = false;
+      submitBtn.style.display = "inline";
+      resetBtn.style.display = "none";
       canActivateSubmitBtn(keywordsBtns);
     }, DURATION_SUBMIT);
 
@@ -186,6 +188,8 @@ $('document').ready(function () {
       // sets a timer and make it so that the inner button is not clickable.
       setTimeout(() => {
         resetBtn.disabled = false;
+        submitBtn.style.display = "none";
+        resetBtn.style.display = "inline";
         // downloadBtn.style.display = "block";
         // title.innerText = author_title[0]; title.style.display = "block";
         // author.innerText = author_title[1]; author.style.display = "block";
@@ -222,6 +226,8 @@ $('document').ready(function () {
     // Make submit button inactive for the duration.
     setTimeout(() => {
       submitBtn.disabled = false;
+      submitBtn.style.display = "inline";
+      resetBtn.style.display = "none";
       canActivateSubmitBtn(keywordsBtns);
     }, DURATION_SUBMIT);
   });
