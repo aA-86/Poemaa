@@ -193,8 +193,12 @@ $('document').ready(function () {
         // downloadBtn.style.display = "block";
         // title.innerText = author_title[0]; title.style.display = "block";
         // author.innerText = author_title[1]; author.style.display = "block";
-        title.style.color = "rgba(0, 0, 0, 1)";
-        author.style.color = "rgba(0, 0, 0, 1)";
+        // title.style.color = "rgba(0, 0, 0, 1)";
+        // author.style.color = "rgba(0, 0, 0, 1)";
+        // title.style.fontSize = "1em";
+        // author.style.fontSize = "1em";
+        title.style.transform = "translateY(0)";
+        author.style.transform = "translateY(0)";
         // downloadBtn.style.opacity = "1";
 
         downloadBtn.classList.add("shake1");
@@ -219,8 +223,8 @@ $('document').ready(function () {
     populateKeyWords();
 
     submitBtn.classList.remove("shake1");
-    title.style.color = "rgba(0, 0, 0, 0)";
-    author.style.color = "rgba(0, 0, 0, 0)";
+    title.style.transform = "translateY(1000%)";
+        author.style.transform = "translateY(1000%)";
     downloadBtn.style.opacity = "0";
     keywordsContainer.style.marginTop = "-25%";
     // Make submit button inactive for the duration.

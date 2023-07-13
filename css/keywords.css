@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    box-sizing: border-box;
     max-width: 100%;
     min-width: 100%;
     max-height: var(--keywords-container-height);
@@ -44,6 +45,7 @@
     width: 26.33%;
     padding: 0px;
     background-color: rgba(0, 0, 0, 0);  /*completely transparent background colour */
+    padding: 15px 0px;
 }
 
 .shake1,
