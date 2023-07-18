@@ -83,10 +83,6 @@
     color: rgba(255, 255, 255, 0.75);
 }
 
-#keywords-container #submit-container {
-    display: none;
-}
-
 #submit-container {
     display: inline;
 }
@@ -94,8 +90,9 @@
 #inner-btn-reset,
 #submit-btn {
     font-size: 1.2em;
+    /* display: none; */
     background-color: rgba(0, 0, 0, 0);
-    display: none;
+    opacity: 0;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -167,6 +164,26 @@
         top: 90%;
         left: 50%;
         transform: translate(-50%, -90%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

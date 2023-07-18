@@ -2,6 +2,7 @@
 #title-card-container {
   background-image: url("./../images/truncated.jpg");
   -webkit-background-clip: text;
+  opacity: 0;
 }
 
 #title-card {
